@@ -13,7 +13,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://confrence-tan.vercel.app",
     },
 });
 
@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
 
 
 
-    
+
 
     socket.on("offer", ({ roomId, offer }) => {
         socket.to(roomId).emit("offer", offer);
