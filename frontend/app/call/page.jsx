@@ -83,7 +83,7 @@ const Call = () => {
 
   // Socket Connection
   useEffect(() => {
-    socketRef.current = io("http://localhost:5555");
+    socketRef.current = io("https://confrence-server.vercel.app");
 
     socketRef.current.on("connect", () => {
       console.log("Connected:", socketRef.current.id);
